@@ -30,7 +30,12 @@
     "css-loader": "^3.5.3",
     "css-module": "^1.1.4",
     "nedb": "^1.8.0",
+    "nedb-promises": "^4.0.3",
     "nw": "^0.45.4",
     "redux-thunk": "^2.3.0"
+  },
+  "browser": {
+    "./lib/customUtils.js": "./browser-version/browser-specific/lib/customUtils.js",
+    "./lib/storage.js": "./browser-version/browser-specific/lib/storage.js"
   }
 }
