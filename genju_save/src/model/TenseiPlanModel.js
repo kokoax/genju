@@ -9,8 +9,12 @@ export default class TenseiPlanModel extends ModelBase {
     super("tensei_plan");
   }
 
+  getTenseiPlanByTenseiId(tenseiId) {
+     return super.find({ tenseiId });
+  }
+
   setTenseiPlan(tensei_id, tensei_num) {
-    this.insert({
+    return super.insert({
       tensei_id,
       tensei_num,
     })

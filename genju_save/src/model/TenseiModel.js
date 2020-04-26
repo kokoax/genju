@@ -9,11 +9,11 @@ export default class TenseiModel extends ModelBase {
   }
 
   getTenseiList() {
-    super.find({})
+    return super.find({})
   }
 
   setTenseiTitle(title) {
-    super.insert({
+    return super.insert({
       title
     })
   }

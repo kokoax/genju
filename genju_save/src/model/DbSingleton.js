@@ -1,5 +1,7 @@
-var Datastore = new require('nedb')
-  , db = new Datastore({ filename: './genju.db' });
+const Datastore = require('nedb-promises');
+const path = '../../dist/db/genju.db';
 
-Object.freeze(db)
+let db = Datastore.create(path);
+
+db.load();
 export default db;

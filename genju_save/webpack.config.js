@@ -2,7 +2,7 @@ const path = require("path");
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: "./src/index.jsx",
+  entry: ['@babel/polyfill', "./src/index.jsx"],
   module: {
     rules: [{
       test: /\.(js|jsx)$/,

@@ -7,10 +7,12 @@ export default class ModelBase {
   }
 
   find(query) {
-    this.db.find(Object.assign({table_name: this.table_name}, query))
+    return this.db.find(Object.assign({table_name: this.table_name}, query));
   }
 
   insert(query) {
-    this.db.insert(Object.assign({table_name: this.table_name}, query))
+    return this.db.insert(
+      Object.assign({table_name: this.table_name}, query)
+    );
   }
 }
